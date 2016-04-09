@@ -2,7 +2,9 @@ Freifunk Ulm Monitoring Scripts:
 
 Status check:
 
-Script: freifunk_network.sh
+Script:
+
+freifunk_network.sh
 
 Voraussetzungen:
   - http://github.com/pixelb/scripts/commits/master/scripts/ansi2html.sh
@@ -21,6 +23,9 @@ Voraussetzungen:
  - https://raw.github.com/sivel/speedtest-cli/master/speedtest_cli.py
 
 Aufruf:
+
  freifunk_speed_header.sh | ansi2html.sh > index.html
+ 
  speedtest-cli | ansi2html.sh >> index.html
+ 
  freifunk_speed_footer.sh | ansi2html.sh >> index.html
