@@ -2,6 +2,7 @@
 
 ##ping
 ##
+##ToDo: Warning einrichten bei zu langer Ping-Laufzeit
 ##
 ## addr = ziel (v4 und v6)
 ## count = anzahl der pings
@@ -11,7 +12,7 @@
 count=1
 tout=1
 addr4=8.8.8.8
-addr6=fe80::
+addr6=0::
 
 ##########################
 #ping4
