@@ -1,0 +1,49 @@
+[
+{
+  "name": "vpn1",
+
+  "exitip4route": "212.83.150.199 via 10.33.64.1",
+  "exitip4addr": "185.65.135.182",
+
+  "ping4status":"y",
+  "ping4time":"382.289",
+
+  "ping6status":"n",
+  "ping6time":"o",
+
+  "dns4ffulm": "vpn1.ffulm",
+  "dns4ffaddr": "10.33.64.1",
+
+  "dns4name": "ipv4.l.google.com",
+  "dns4addr": "216.58.215.110",
+
+  "dns6name": "nslookup-Name",
+  "dns6addr": "lookup-adresse",
+
+  "status": "mid"
+},
+{
+    "name": "vpn2",
+
+    "exitip4route": "212.83.150.199 via 10.33.64.1",
+    "exitip4addr": "185.65.135.182",
+
+    "ping4status":"y",
+    "ping4time":"382.289",
+
+    "ping6status":"y",
+    "ping6time":"382.28",
+
+    "dns4ffulm": "vpn1.ffulm",
+    "dns4ffaddr": "10.33.64.1",
+
+    "dns4name": "ipv4.l.google.com",
+    "dns4addr": "216.58.215.110",
+
+    "dns6name": "ipv6.l.google.com",
+    "dns6addr": "2620:0:ccc::2",
+
+    "status": "good"
+
+}
+]

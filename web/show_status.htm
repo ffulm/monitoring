@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Status with jQuery</title>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/show_status.css">
+</head>
+<body>
+	<div class="header">
+		<img src="https://wiki.freifunk.net/images/thumb/f/f2/Logo_ff_ulm_klein.png/400px-Logo_ff_ulm_klein.png" alt="Freifunk Ulm Logo">
+		<h1>Status of the Freifunk Ulm Network</h1>
+	</div>
+	<div id="content">Sorry, this page needs Javascript enabled to display the status. </div>
+	
+	<script>
+		(function () {
+		$.getJSON( "data/data.json", function( data ) {
+		  var content = document.getElementById("content");
+		  content.innerHTML = '';
+		  $.each( data, function( index, server ) {
+			var items = [];
+			items.push("<div class='status-" + server.status + "'></div>");
+			items.push("<h1>" + server.name + "</h1>");
+			items.push("<div id='properties_left'>");
+			$.each (server , function( key, value) {
+				if (($.inArray(key, ['name', 'status']) < 0) && (key.indexOf('dns') == -1)) {
+					items.push("<b>" + key + ": </b>" + value + "<br>")
+				}
+			});
+			items.push("</div>");
+			items.push("<div id='properties_right'>");
+			$.each (server , function( key, value) {
+				if (($.inArray(key, ['name', 'status']) < 0) && (key.indexOf('dns') >= 0)) {
+					items.push("<b>" + key + ": </b>" + value + "<br>")
+				}
+			});
+			items.push("</div>");
+			  $( "<div/>", {
+				"class": "serverblock",
+				html: items.join( "" )
+			  }).appendTo( "body" );
+		  });
+		   
+		});
+		})();
+	</script>
+ 
+</body>
+</html>
