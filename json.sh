@@ -5,5 +5,13 @@
 
 
 echo [ > data.json
- 
-./ping.sh
+
+echo { >> data.json
+
+echo \"name\": \"vpn1\", >> data.json
+
+
+./ping.sh #übergabewerte!
+
+
+echo ] >> data.json
