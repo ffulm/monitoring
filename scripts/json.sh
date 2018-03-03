@@ -22,7 +22,7 @@ echo \"name\": \"vpn1\", >> tmp.json
 
 echo \"status\": \"$tmpstat\", >> tmp.json
 
-echo } >> tmp.json
+echo }, >> tmp.json
 
 ### timestamp
 echo { >> tmp.json
