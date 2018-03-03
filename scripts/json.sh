@@ -1,7 +1,11 @@
 #!/bin/bash
 
-## erzeugt das json-File
-## ruft die anderen Tools auf, die das File ergänzen
+## 03.2018, Jan Hermann, freifunk@jan-hermann.de
+##
+## Version 1.0
+##
+## create json-File
+## call subscripts for checkups
 
 
 echo [ > tmp.json
@@ -18,10 +22,7 @@ echo \"name\": \"vpn1\", >> tmp.json
 
 ### status
 
-
-
 echo \"status\": \"$tmpstat\", >> tmp.json
-
 echo }, >> tmp.json
 
 ### timestamp
@@ -33,5 +34,5 @@ echo } >> tmp.json
 ## close json
 echo ] >> tmp.json
 
-## übergabe der tmp an data
+## move to data from tmp-file
 mv tmp.json data.json

@@ -1,13 +1,15 @@
 #!/bin/bash
 
-##ping
+## 03.2018, Jan Hermann, freifunk@jan-hermann.de
 ##
-##ToDo: Warning einrichten bei zu langer Ping-Laufzeit
+## Version 1.0
 ##
-## addr = ziel (v4 und v6)
-## count = anzahl der pings
-## tout = wartezeit bis abbruch in s
-## time = Ergebnis: avg des ping
+##ToDo: ToDo: Set up a warning if the ping runtime is too long
+##
+## addr = target (v4 and v6)
+## count = number of pings
+## tout = waite until timeout in s
+## time = Result: output of the return value: avg
 
 count=1
 tout=1
@@ -18,7 +20,7 @@ addr6=0::
 #ping4
 time=$(ping -c $count -W $tout $addr4 | grep round-trip | awk -F/ '{print $5}')
 
-#if zeit da-> good, sonst bad
+#if: check if there is a value from the ping command. else: send warning
 if [$time == ""]
 then
   echo \"ping4status\": \"bad\", >> tmp.json
@@ -28,7 +30,7 @@ else
 
 fi
 
-#ausgabe der avg-time in das json-file
+# output of the avg value with transfer to the json file
 echo \"ping4time\": \"$time\", >> tmp.json
 
 ###########################
@@ -36,7 +38,7 @@ echo \"ping4time\": \"$time\", >> tmp.json
 #ping6
 time=$(ping -c $count -W $tout $addr6 | grep round-trip | awk -F/ '{print $5}')
 
-#if zeit da-> good, sonst bad
+#if: check if there is a value from the ping command. else: send warning
 if [$time == ""]
 then
   echo \"ping4status\": \"bad\", >> tmp.json
@@ -46,7 +48,7 @@ else
 
 fi
 
-#ausgabe der avg-time in das json-file
+#output of the avg value with transfer to the json file
 echo \"ping4time\": \"$time\", >> tmp.json
 
 
