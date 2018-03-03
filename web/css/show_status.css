@@ -1,3 +1,5 @@
+/* 03/2018 - Kay Jahnke (kay.ulm.freifunk@gmail.com)*/
+
 body {
 	font-family: Arial, Helvetica, sans-serif;
 }
@@ -20,8 +22,23 @@ body {
 .header h1 {
     float: right;
     width:560px;
-    padding: 22px 0;
+    padding: 20px 0;
     color: white;
+}
+
+.header #update-time{
+    float: right;
+    color: white;
+    font-size: 9pt;
+    margin: -5px;
+}
+
+
+.header #throughput{
+    float: right;
+    color: white;
+    font-size: 9pt;
+    margin: -5px;
 }
 
 .serverblock {
@@ -77,7 +94,7 @@ body {
     //border: 1px green solid;
 }
 
-.status-low {
+.status-bad {
     display: block;
     float: left;
     margin:10px;
