@@ -13,6 +13,8 @@ echo \"name\": \"vpn1\", >> tmp.json
 ./ping.sh #übergabewerte!
 
 
+./speedtest.sh
+
 
 ### status
 
