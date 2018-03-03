@@ -1,0 +1,128 @@
+/* 03/2018 - Kay Jahnke (kay.ulm.freifunk@gmail.com)*/
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.header{
+    display: block;
+    width: 800px;
+    height:130px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    background-color:  #dc0067;
+}
+
+.header img {
+    float: left;
+    width:200px;
+}
+
+.header h1 {
+    float: right;
+    width:560px;
+    padding: 20px 0;
+    color: white;
+}
+
+.header #update-time{
+    float: right;
+    color: white;
+    font-size: 9pt;
+    margin: -5px;
+}
+
+
+.header #throughput{
+    float: right;
+    color: white;
+    font-size: 9pt;
+    margin: -5px;
+}
+
+.serverblock {
+    display: block;
+    width: 800px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 1px;
+    background-color: #eee;
+}
+
+.serverblock #properties_left {
+    display: none;
+    position: relative;
+    left:90px;
+    width:720px;
+	height: 130px;
+    background-color: #eee;
+    padding-bottom: 5px;
+    z-index: 1;
+    //border: 1px green solid;
+}
+
+.serverblock #properties_right {
+    display: none;
+    position: relative;
+	top: -137px;
+    left:460px;
+    width:350px;
+	height: 130px;
+    margin-bottom: -137px;
+    background-color: #eee;
+    padding-bottom: 5px;
+    z-index: 1;
+    //border: 1px green solid;
+}
+
+.serverblock:hover #properties_left, 
+.serverblock:hover #properties_right {
+    display: block;
+}
+
+
+.serverblock h1 {
+    padding: 10px;
+    padding-top: 15px; 
+    margin-left: 80px;
+    margin-top: 0px;
+    //border: 1px green solid;
+}
+
+.status-bad {
+    display: block;
+    float: left;
+    margin:10px;
+    width: 60px;
+    height:60px;
+    background-color: #D40;
+    border-radius: 50%;
+    box-shadow: #822 0 -1px 7px 1px, inset #900 0 -1px 9px, #F00 0 2px 12px;
+}
+
+.status-mid {
+    display: block;
+    float: left;
+    margin:10px;
+    width: 60px;
+    height:60px;
+    background-color: #FD0;
+    border-radius: 50%;
+    box-shadow: #ba2 0 -1px 7px 1px, inset #ab0 0 -1px 9px, #FD0 0 2px 12px;
+}
+
+.status-good {
+    display: block;
+    float: left;
+    margin:10px;
+    width: 60px;
+    height:60px;
+    background-color: #3C0;
+    border-radius: 50%;
+    box-shadow: #282 0 -1px 7px 1px, inset #090 0 -1px 9px, #0F0 0 2px 12px;
+}
