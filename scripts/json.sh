@@ -4,14 +4,27 @@
 ## ruft die anderen Tools auf, die das File ergänzen
 
 
-echo [ > data.json
+echo [ > tmp.json
+echo { >> tmp.json
 
-echo { >> data.json
+echo \"name\": \"vpn1\", >> tmp.json
 
-echo \"name\": \"vpn1\", >> data.json
-
-
+## check-scripts
 ./ping.sh #übergabewerte!
 
 
-echo ] >> data.json
+
+### status
+
+echo \"status\": \"$tmpstat\", >> tmp.json
+
+### timestamp
+ts=$(date | awk '{print $2,$3,$6" -",$4}')
+echo \"timestamp\": \"$ts\" >> tmp.json
+
+## close json
+echo } >> tmp.json
+echo ] >> tmp.json
+
+## übergabe der tmp an data
+mv tmp.json data.json

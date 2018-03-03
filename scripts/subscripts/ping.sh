@@ -21,15 +21,15 @@ time=$(ping -c $count -W $tout $addr4 | grep round-trip | awk -F/ '{print $5}')
 #if zeit da-> good, sonst bad
 if [$time == ""]
 then
-  echo \"ping4status\": \"bad\", >> data.json
+  echo \"ping4status\": \"bad\", >> tmp.json
 
 else
-  echo \"ping4status\": \"good\", >> data.json
+  echo \"ping4status\": \"good\", >> tmp.json
 
 fi
 
 #ausgabe der avg-time in das json-file
-echo \"ping4time\": \"$time\", >> data.json
+echo \"ping4time\": \"$time\", >> tmp.json
 
 ###########################
 ###########################
@@ -39,15 +39,15 @@ time=$(ping -c $count -W $tout $addr6 | grep round-trip | awk -F/ '{print $5}')
 #if zeit da-> good, sonst bad
 if [$time == ""]
 then
-  echo \"ping4status\": \"bad\", >> data.json
+  echo \"ping4status\": \"bad\", >> tmp.json
 
 else
-  echo \"ping4status\": \"good\", >> data.json
+  echo \"ping4status\": \"good\", >> tmp.json
 
 fi
 
 #ausgabe der avg-time in das json-file
-echo \"ping4time\": \"$time\", >> data.json
+echo \"ping4time\": \"$time\", >> tmp.json
 
 
 ##########################
