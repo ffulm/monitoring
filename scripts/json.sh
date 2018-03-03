@@ -16,14 +16,19 @@ echo \"name\": \"vpn1\", >> tmp.json
 
 ### status
 
+
+
 echo \"status\": \"$tmpstat\", >> tmp.json
 
+echo } >> tmp.json
+
 ### timestamp
+echo { >> tmp.json
 ts=$(date | awk '{print $2,$3,$6" -",$4}')
 echo \"timestamp\": \"$ts\" >> tmp.json
+echo } >> tmp.json
 
 ## close json
-echo } >> tmp.json
 echo ] >> tmp.json
 
 ## übergabe der tmp an data

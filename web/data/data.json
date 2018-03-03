@@ -5,7 +5,7 @@
   "exitip4route": "212.83.150.199 via 10.33.64.1",
   "exitip4addr": "185.65.135.182",
 
-  "ping4status":"y",
+  "ping4status":"bad",
   "ping4time":"382.289",
 
   "ping6status":"n",
@@ -20,7 +20,7 @@
   "dns6name": "nslookup-Name",
   "dns6addr": "lookup-adresse",
 
-  "status": "mid"
+  "status": "bad"
 },
 {
     "name": "vpn2",
@@ -28,10 +28,10 @@
     "exitip4route": "212.83.150.199 via 10.33.64.1",
     "exitip4addr": "185.65.135.182",
 
-    "ping4status":"y",
+    "ping4status":"good",
     "ping4time":"382.289",
 
-    "ping6status":"y",
+    "ping6status":"good",
     "ping6time":"382.28",
 
     "dns4ffulm": "vpn1.ffulm",
@@ -45,5 +45,8 @@
 
     "status": "good"
 
+}
+{
+  "timestamp": "3. Mär 2018 - 09:37:42"
 }
 ]
