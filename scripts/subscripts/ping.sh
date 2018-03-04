@@ -15,12 +15,9 @@
 FILE="./cfg/config.cfg"
 . $FILE
 
-addr4=8.8.8.8
-addr6=0::
-
 ##########################
 #ping4
-time=$(ping -c $cPing -W $tout $addr4 | grep round-trip | awk -F/ '{print $5}')
+time=$(ping -c $cPing -W $tout $addr4ping | grep round-trip | awk -F/ '{print $5}')
 
 #if: check if there is a value from the ping command. else: send warning
 if [$time == ""]
@@ -38,7 +35,7 @@ echo \"ping4time\": \"$time\", >> tmp.json
 ###########################
 ###########################
 #ping6
-time=$(ping -c $cPing -W $tout $addr6 | grep round-trip | awk -F/ '{print $5}')
+time=$(ping -c $cPing -W $tout $addr6ping | grep round-trip | awk -F/ '{print $5}')
 
 #if: check if there is a value from the ping command. else: send warning
 if [$time == ""]

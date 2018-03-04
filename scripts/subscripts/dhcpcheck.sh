@@ -12,10 +12,7 @@
 FILE="./cfg/config.cfg"
 . $FILE
 
-s=10.33.64.1
-c=10.33.99.1
-
-
+#call dhcping an store data to var
 tempDHCP=$(/usr/sbin/dhcping -s $s -c $c -h $hwAddr)
 
 echo \'dhcpStatus\': \'$tempDHCP\', >> tmp.json

@@ -11,9 +11,6 @@
 FILE="./cfg/config.cfg"
 . $FILE
 
-gwr=10.33.64.1 #gw for route *
-snip=212.83.150.199 #subnet (1. adress?-> std-gw??)
-snm=32 #subnetmask
 
 # add route
 ip r add $snip/$snm via $gwr
