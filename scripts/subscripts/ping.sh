@@ -41,10 +41,10 @@ time=$(ping -c $count -W $tout $addr6 | grep round-trip | awk -F/ '{print $5}')
 #if: check if there is a value from the ping command. else: send warning
 if [$time == ""]
 then
-  echo \"ping4status\": \"bad\", >> tmp.json
+  echo \"ping6status\": \"bad\", >> tmp.json
 
 else
-  echo \"ping4status\": \"good\", >> tmp.json
+  echo \"ping6status\": \"good\", >> tmp.json
 
 fi
 
