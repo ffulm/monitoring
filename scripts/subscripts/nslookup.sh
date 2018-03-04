@@ -8,6 +8,11 @@
 ##
 ## nslookup [name] [server]
 
+
+# readd config-file
+FILE="./cfg/config.cfg"
+. $FILE
+
 ## zone ffulm
 locDNSsrv=10.33.64.1
 srvName=vpn1.ffulm

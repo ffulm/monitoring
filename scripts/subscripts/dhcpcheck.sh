@@ -7,11 +7,15 @@
 ## require dhcping
 ## check dhcp
 
+
+# readd config-file
+FILE="./cfg/config.cfg"
+. $FILE
+
 s=10.33.64.1
 c=10.33.99.1
-h=00:11:22:33:44:55
 
 
-tempDHCP=$(/usr/sbin/dhcping -s $s -c $c -h $h)
+tempDHCP=$(/usr/sbin/dhcping -s $s -c $c -h $hwAddr)
 
-echo \'dhcpStatus\': \'$tempDHCP\' >> tmp.json
+echo \'dhcpStatus\': \'$tempDHCP\', >> tmp.json

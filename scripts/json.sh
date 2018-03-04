@@ -7,23 +7,37 @@
 ## create json-File
 ## call subscripts for checkups
 
+# call setup-file
+FILE="./cfg/config.cfg"
+. $FILE
 
+# start json-tmp-File
 echo [ > tmp.json
-echo { >> tmp.json
 
-echo \"name\": \"vpn1\", >> tmp.json
+# for
+for (( i = 1; i < $nos; i++ )); do
 
-## check-scripts
-./ping.sh #übergabewerte!
+  #counter
+  a=1
+
+  echo { >> tmp.json
+  echo \"name\": \"$name$a\", >> tmp.json
+
+  ## check-scripts
+  ./subscripts/ping.sh
+  ./subscripts/nslookup.sh
+  ./subscripts/exitIP.sh
+  ./subscripts/dhcpCheck.sh
+  ./subscripts/speedtest.sh
 
 
-./speedtest.sh
+  ### status
 
+  echo \"status\": \"$tmpstat\", >> tmp.json
+  echo }, >> tmp.json
 
-### status
-
-echo \"status\": \"$tmpstat\", >> tmp.json
-echo }, >> tmp.json
+  a++
+done
 
 ### timestamp
 echo { >> tmp.json
