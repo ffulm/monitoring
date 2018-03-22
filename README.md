@@ -9,7 +9,9 @@ Therefore, this tool contains two parts:
 
 ------
 ToDo's:
-* Knotenanzahl in Page einbauen (Infos stehen in der Karte)
+* Hintergrund hinter Logo weiß machen ohne Rand
+
+* Knotenanzahl in Page einbauen (Infos stehen in der Karte) -> https://map.freifunk-ulm.de/data/graph.json; https://map.freifunk-ulm.de/data/nodes.json
 
 * Userzahl in Page einbauen (Infos stehen in der Karte)
 
@@ -24,3 +26,5 @@ ToDo's:
 * nslookup-Modul: nslookup.sh
 
 * Dokumentation!
+
+* JSON Generierung durch mehrere Rechner, Anzeige des Status aus mehreren verschiedenen JSON Dateien
