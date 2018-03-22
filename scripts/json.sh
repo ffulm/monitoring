@@ -9,7 +9,7 @@
 
 # call setup-file
 FILE="./cfg/config.cfg"
-. $FILE
+. $FILE #note the space between the dot and the leading slash of $FILE
 
 # start json-tmp-File
 echo [ > tmp.json
