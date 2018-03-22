@@ -15,8 +15,6 @@ ToDo's:
 
 * Userzahl in Page einbauen (Infos stehen in der Karte)
 
-* Auswertung (Statistik, welche Routermodelle eingesetzt werden)(Infos stehen in der Karte)
-
 * Übergabewerte für die Scripte: Externe Tabellen befüllen mit den Servern und Routen, etc
 
 * zentrales Config-File für alle Module: zB Ping: Counter, Wartezeit, ...
