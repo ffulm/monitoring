@@ -26,3 +26,5 @@ ToDo's:
 * Dokumentation!
 
 * JSON Generierung durch mehrere Rechner, Anzeige des Status aus mehreren verschiedenen JSON Dateien
+
+* Telegram-Bot für Statusmeldungen
